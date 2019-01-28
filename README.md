@@ -2,5 +2,7 @@
 
 A retro remix of Galaga and Space Invaders
 
-(c) 2019 Florentina Ilie
 
+
+
+(c) 2019 Mackenzie Hatfield, Florentina Ilie
