@@ -2,4 +2,7 @@
 
 A retro remix of Galaga and Space Invaders
 
-(c) 2019 Steve Finch
+
+
+
+(c) 2019 Mackenzie Hatfield, Florentina Ilie, Steve Finch
