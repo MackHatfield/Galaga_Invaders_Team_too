@@ -12,4 +12,8 @@ class Fort
   def take_damage(hit_point)
     # TODO show area of damage
   end
+
+  def show_level(level)
+    # TODO: func to display level
+  end
 end
