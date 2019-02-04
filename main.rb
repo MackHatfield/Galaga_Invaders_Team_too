@@ -3,6 +3,16 @@ class GalagaInvaders
 
   def initialize
     @caption = "Galaga Invaders"
+    @player_ship = Ship.New(x, y)
+  end
+
+  def update
+    @player_ship.move
+  end
+
+  def draw
+    @player_ship.draw
+    end
     @ship = Ship.new
     @current_level = 0
   end

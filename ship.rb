@@ -1,6 +1,8 @@
 class Ship
 
-  def initialize()
+  def initialize(x, y)
+    @x = x
+    @y = y
   end
 
   def move()
@@ -11,5 +13,5 @@ class Ship
 
   def die()
   end
-        
+    
 end
