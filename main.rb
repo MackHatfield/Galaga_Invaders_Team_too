@@ -1,12 +1,14 @@
 class GalagaInvaders
 
+
   def initialize
     @caption = "Galaga Invaders"
     @ship = Ship.new
+    @current_level = 0
   end
 
   def update
-    # ...
+    
   end
 
   def draw
@@ -15,11 +17,11 @@ class GalagaInvaders
 
   def key_pressed(key)
     if key == 'a'
-      @ship.moveLeft
+      @ship.move_left
     if key == 'd'
-      @ship.moveRight
+      @ship.move_right
     if key == 'space'
-      @ship.fireMissile
+      @ship.fire_missile
 
   def show
     while (true) do
