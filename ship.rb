@@ -36,10 +36,6 @@ class Ship
     "✈️ (#{x}, #{y})"
   end
 
-  def fire
-    MissileManager.launch(muzzle_location)
-  end
-
   private
 
   def move(delta)

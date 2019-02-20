@@ -10,6 +10,7 @@ class GalagaInvaders
   def initialize
     @caption = "Galaga Invaders"
     @ship = Ship.new(WIDTH, HEIGHT)
+    @missile_manager = MissileManager.new()
   end
 
   def update
@@ -36,7 +37,7 @@ class GalagaInvaders
       ship.move_right
     end
     if key == " "
-    #TODO: allow "firing of missiles"
+      missile_manager.fire(ship)
     end
   end
 end
