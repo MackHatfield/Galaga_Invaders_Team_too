@@ -1,13 +1,17 @@
+include gametimer
 class GalagaInvaders
 
 
   def initialize
     @caption = "Galaga Invaders"
     @player_ship = Ship.New(x, y)
+    @game_timer = game_timer.new()
+    
   end
 
   def update
     @player_ship.move
+    @game_timer.tick
   end
 
   def draw
