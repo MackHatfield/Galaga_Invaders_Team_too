@@ -1,12 +1,11 @@
 class UFO
-  def initialize(x, y)
-    @x_coordinate = x
-    @y_coordinate = y
-    @showing = false
-    @is_hit = false
-  end
+  WIDTH = 200
+  HEIGHT = 100
+  DEFAULT_VELOCITY = 5
+  ORDNANCE_VELOCITY = -20
+  LEFT_START_COORDINATE = -(WIDTH * 2)
 
-  def draw()
-    @showing = true
+  def initialize(screen_width)
+    @y = HEIGHT * 2;
   end
 end
