@@ -1,25 +1,27 @@
 class Missile
 
+	attr_accessor :x, :y :velocity
 
-	def initialize(x, y)
-			@X_coordinate = x
-			@y_coordinate = y
+	def initialize(args)
+			@x = args[:x]
+			@y = args[:y]
+			@velocity = args[:velocity]
 	end
 
-	def collideWith(object)
-		isVisible(false)
-
+	def collide_with(object)
+		#TODO
 	end
 
-	def reachEdge
-		isVisible(false)
+	def offscreen?
+		y < 0
 	end
 
-	def isVisible(status)
-		status
+	def draw
+		puts self
+	end
+
+	def move
+		y += velocity
 	end
 
 end
-
-
-
