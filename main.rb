@@ -9,15 +9,11 @@ class GalagaInvaders
 
   def initialize
     @caption = "Galaga Invaders"
-    @player_ship = Ship.New(WIDTH, HEIGHT)
+    @ship = Ship.new(WIDTH, HEIGHT)
   end
 
   def update
     # @player_ship.move
-  end
-
-  def update
-    
   end
 
   def draw
@@ -38,6 +34,9 @@ class GalagaInvaders
     end
     if key == 'd'
       ship.move_right
+    end
+    if key == " "
+    #TODO: allow "firing of missiles"
     end
   end
 end
