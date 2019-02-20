@@ -1,20 +1,19 @@
+require_relative 'ship'
+
 class GalagaInvaders
 
+  WIDTH = 1920
+  HEIGHT = 1080
+
+  attr_accessor :ship
 
   def initialize
     @caption = "Galaga Invaders"
-    @player_ship = Ship.New(x, y)
+    @player_ship = Ship.New(WIDTH, HEIGHT)
   end
 
   def update
-    @player_ship.move
-  end
-
-  def draw
-    @player_ship.draw
-    end
-    @ship = Ship.new
-    @current_level = 0
+    # @player_ship.move
   end
 
   def update
@@ -22,24 +21,25 @@ class GalagaInvaders
   end
 
   def draw
-    @ship.draw
+    ship.draw
   end
-
-  def key_pressed(key)
-    if key == 'a'
-      @ship.move_left
-    if key == 'd'
-      @ship.move_right
-    if key == 'space'
-      @ship.fire_missile
 
   def show
     while (true) do
       update
       draw
+      key_pressed(gets.chomp)
     end
   end
 
+  def key_pressed(key)
+    if key == 'a'
+      ship.move_left
+    end
+    if key == 'd'
+      ship.move_right
+    end
+  end
 end
 
 GalagaInvaders.new.show
