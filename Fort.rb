@@ -1,9 +1,9 @@
 class Fort
-	def initialize(x, y)
-		@x = x
-		@y = y
-		@show = true
-	end
+  include Placeable
+
+  def initialize(x,y)
+    place_on_screen(x,y)
+  end
 
   def remove:
   	@show = false
