@@ -1,5 +1,6 @@
 class Ship
-
+  include Placeable
+  
   WIDTH = 100
   HEIGHT = 100
   DEFAULT_VELOCITY = 5
@@ -10,6 +11,7 @@ class Ship
   def initialize(screen_width, screen_height)
     @x = screen_width / 2
     @y = screen_height - half_height
+    place_on_screen(x,y)
   end
 
   def ordnance_velocity
