@@ -1,6 +1,5 @@
 class UFO
   include Placeable
-  
   WIDTH = 200
   HEIGHT = 100
   DEFAULT_VELOCITY = 5
@@ -12,4 +11,9 @@ class UFO
     @y = HEIGHT * 2;
     place_on_screen(x,y)
   end
+
+  def location
+    #TODO have the ufo hover at a random x value
+  end
+
 end

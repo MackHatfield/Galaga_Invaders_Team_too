@@ -1,21 +1,20 @@
 class Missile
 	include Placeable
-	attr_accessor :x, :y :velocity
+	attr_accessor :location, :velocity
 
 	def initialize(args)
-	  x = args[:x]
-	  y = args[:y]
+	  @location = Vector.new(args[:x], args[:y])
 
-	  place_on_screen(x,y)
+	  place_on_screen(location.x, location.y)
 	  @velocity = args[:velocity]
 	end
 	
 	def collide_with(object)
-		#TODO
+		self.location == object.location
 	end
 
 	def offscreen?
-		y < 0
+		location.y < 0
 	end
 
 	def draw
@@ -23,7 +22,9 @@ class Missile
 	end
 
 	def move
-		y += velocity
+		location.y += velocity
 	end
 
 end
+
+Vector = Struct.new(:x, :y)
