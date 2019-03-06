@@ -1,8 +1,8 @@
 class Alien
+  include Placeable
+
   def initialize(x,y)
-    @x = x
-    @y = y
-    @show = true
+    place_on_screen(x,y)
   end
 
   def move(x,y)
