@@ -1,5 +1,5 @@
 require_relative 'ship'
-
+require_relative 'missilemanager'
 class GalagaInvaders
 
   WIDTH = 1920
