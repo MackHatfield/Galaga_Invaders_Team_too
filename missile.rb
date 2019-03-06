@@ -7,8 +7,8 @@ class Missile
 			@velocity = args[:velocity]
 	end
 
-	def collide_with(object)
-		#TODO
+	def collides_with?(object)
+		self.location == object.location
 	end
 
 	def offscreen?
