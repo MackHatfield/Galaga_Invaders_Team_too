@@ -1,10 +1,9 @@
 class Missile
 
-	attr_accessor :x, :y :velocity
+	attr_accessor :velocity, :location
 
 	def initialize(args)
-			@x = args[:x]
-			@y = args[:y]
+			@location = Vector.new(args[:x], args[:y])
 			@velocity = args[:velocity]
 	end
 
@@ -13,7 +12,7 @@ class Missile
 	end
 
 	def offscreen?
-		y < 0
+		location.y < 0
 	end
 
 	def draw
@@ -21,7 +20,9 @@ class Missile
 	end
 
 	def move
-		y += velocity
+		location.y += velocity
 	end
 
 end
+
+Vector = Struct.new(:x, :y)
