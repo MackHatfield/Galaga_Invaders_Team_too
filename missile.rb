@@ -26,5 +26,3 @@ class Missile
 	end
 
 end
-
-Vector = Struct.new(:x, :y)

@@ -1,7 +1,8 @@
 class Alien
   include Placeable
-
-  def initialize(x,y)
+  attr_accessor :location
+  def initialize(args)
+    @location = Vector.new(args[:x], args[:y])
     place_on_screen(x,y)
   end
 

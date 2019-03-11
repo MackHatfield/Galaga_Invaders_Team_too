@@ -6,4 +6,5 @@ module Placeable
     @show = true
   end
 
+  Vector = Struct.new(:x, :y)
 end
