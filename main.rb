@@ -14,11 +14,58 @@ class GalagaInvaders
   end
 
   def update
-    # @player_ship.move
+    # if ships remaining
+    if ships.remaining
+      ship.show
+      gametimer.increase
+      forts.show
+      
+      if gametimer.time_for_aliens_appear
+        aliens_manager.launch_squad
+      end
+  
+      if aliens_manager.in_formation
+        aliens_manager.attack
+      end
+  
+      if gametimer.time_for_ufo_to_appear
+        ufo.launch
+      end
+  
+      missile_manager.move
+      aliens_manager.move
+      ufo.move
+
+    end
+
+    
+
+      # show player ship
+      # show forts
+      # alien squad(s) are entering screen
+      # have aliens move into formation
+      # aliens start attacking
+      #   if missile collission with player ship
+            # set player ship to destroyed
+          # if missile colission with alien
+            # set alien to destroyed
+            # increase game score by arbitrary amount
+      # after set period of time, alien formation changes to "dive bomb" pattern
+        # continue checking for collisions between missiles and player ship/aliens, forts etc.
+      # after level time has reached the trigger point for a UFO, have UFO move onto the screen
+        # check for collsions between player ship and UFO missiles
+    
+      
+
   end
 
   def draw
     ship.draw
+    fort.draw
+    aliens.draw
+    ufo.draw
+    missile_manager.draw
+    player_score.draw
   end
 
   def show
