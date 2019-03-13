@@ -6,13 +6,11 @@ class Ship
   DEFAULT_VELOCITY = 5
   ORDNANCE_VELOCITY = -10
 
-  attr_accessor :x, :y, :location
+  attr_accessor :x, :y, :location, :show
 
   def initialize(args)
-    @x = screen_width / 2
-    @y = screen_height - half_height
     @location = Vector.new(args[:x], args[:y])
-    place_on_screen(x,y)
+    @show = true
   end
 
   def ordnance_velocity
